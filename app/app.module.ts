@@ -9,6 +9,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { ProductComponent } from './home/product/product.component';
 import { AppRoutingModule } from './app-routing.module';
+import { KendoGridSettingsService } from './kendo-configurations/kendoGridSettings';
 
 @NgModule({
   bootstrap: [
@@ -25,6 +26,7 @@ import { AppRoutingModule } from './app-routing.module';
     HttpClientModule,
     RouterModule,
     AppRoutingModule,
+    KendoGridSettingsService,
     GridModule
   ]
 })

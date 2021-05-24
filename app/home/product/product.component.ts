@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ColumnMenuSettings, DataStateChangeEvent, GridDataResult } from '@progress/kendo-angular-grid';
 import { process, State } from '@progress/kendo-data-query';
+import { KendoGridSettingsService } from '../../kendo-configurations/kendoGridSettings';
 import { sampleProducts } from '../../products';
 
 @Component({
@@ -9,7 +10,7 @@ import { sampleProducts } from '../../products';
   styleUrls: ['./product.component.css']
 })
 export class ProductComponent implements OnInit {
-  constructor() {}
+  constructor(public kendoGridService: KendoGridSettingsService) {}
 
   public columnSettings: ColumnMenuSettings = {
     filter: true,
