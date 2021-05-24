@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { DataStateChangeEvent, GridDataResult } from '@progress/kendo-angular-grid';
+import { ColumnMenuSettings, DataStateChangeEvent, GridDataResult } from '@progress/kendo-angular-grid';
 import { process, State } from '@progress/kendo-data-query';
 import { sampleProducts } from '../../products';
 
@@ -10,6 +10,12 @@ import { sampleProducts } from '../../products';
 })
 export class ProductComponent implements OnInit {
   constructor() {}
+
+  public columnSettings: ColumnMenuSettings = {
+    filter: true,
+    columnChooser: false,
+    sort: false,
+  };
 
   ngOnInit() {}
   public state: State = {
@@ -29,4 +35,5 @@ export class ProductComponent implements OnInit {
     this.state = state;
     this.gridData = process(sampleProducts, this.state);
   }
+
 }

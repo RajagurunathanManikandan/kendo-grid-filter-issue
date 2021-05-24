@@ -1,5 +1,6 @@
 <kendo-grid [data]="gridData" [pageSize]="state.take" [skip]="state.skip" [sort]="state.sort" [filter]="state.filter"
-  [sortable]="true" [pageable]="true" filterable="menu" (dataStateChange)="dataStateChange($event)">
+  [sortable]="true" [pageable]="true" filterable="menu" (dataStateChange)="dataStateChange($event)"
+  [columnMenu]="columnSettings">
   <kendo-grid-column field="ProductID" title="ID" width="40" [filterable]="false">
   </kendo-grid-column>
   <kendo-grid-column field="ProductName" title="Product Name">
